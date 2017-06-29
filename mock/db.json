@@ -1,0 +1,165 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "suername": "13828532500",
+      "password": "123456a"
+    }
+  ],
+  "register":[
+    {
+      "id": 1,
+      "suername": "13828532500",
+      "password": "123456a"
+  }
+  ],
+  "gameclasify": [
+    {
+      "id": 1,
+      "list":[
+        {
+          "title": "选择都有对应",
+          "mgurl":"/static/img/gamelog.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "9.6"
+        },
+        {
+          "title": "活动商品1",
+          "mgurl":"/static/img/tuijian.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "9.6"
+        },
+        {
+          "title": "活动商品1",
+          "mgurl":"/static/img/detail.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "935"
+        },
+        {
+          "title": "活动商品1",
+          "mgurl":"/static/img/gamelog.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "9.6"
+        },
+        {
+          "title": "活动商品1",
+          "mgurl":"/static/img/tuijian.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "9.6"
+        },
+        {
+          "title": "活动商品1",
+          "mgurl":"/static/img/gamelog.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "9.6"
+        }
+      ]
+
+    },
+    {
+      "id": 2,
+      "list":[
+        {
+          "title": "选择都有对应",
+          "mgurl":"/static/img/gamelog.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "9.6"
+        },
+        {
+          "title": "活动商品1",
+          "mgurl":"/static/img/tuijian.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "9.6"
+        },
+        {
+          "title": "活动商品1",
+          "mgurl":"/static/img/detail.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "935"
+        },
+        {
+          "title": "活动商品1",
+          "mgurl":"/static/img/gamelog.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "9.6"
+        },
+        {
+          "title": "活动商品1",
+          "mgurl":"/static/img/tuijian.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "9.6"
+        },
+        {
+          "title": "活动商品1",
+          "mgurl":"/static/img/gamelog.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "9.6"
+        }
+      ]
+
+    },{
+      "id": 3,
+      "list":[
+        {
+          "title": "选择都有对应",
+          "mgurl":"/static/img/gamelog.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "9.6"
+        },
+        {
+          "title": "活动商品1",
+          "mgurl":"/static/img/tuijian.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "9.6"
+        },
+        {
+          "title": "活动商品1",
+          "mgurl":"/static/img/detail.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "935"
+        },
+        {
+          "title": "活动商品1",
+          "mgurl":"/static/img/gamelog.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "9.6"
+        },
+        {
+          "title": "活动商品1",
+          "mgurl":"/static/img/tuijian.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "9.6"
+        },
+        {
+          "title": "活动商品1",
+          "mgurl":"/static/img/gamelog.jpg",
+          "introduce": "每一个选择都有对应的结果",
+          "type": ["开网","竞赛","全能"],
+          "score": "9.6"
+        }
+      ]
+
+    }
+  ]
+
+
+}
+
+
