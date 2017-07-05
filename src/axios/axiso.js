@@ -1,18 +1,11 @@
 import axios from 'axios'
 import store from '../store/index'
 import router from '../router/index'
-
-
-//设置全局axios默认值
-axios.defaults.timeout = 5000; //5000的超时验证
+axios.defaults.timeout = 5000;
 axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
-
-//创建一个axios实例
 const instance = axios.create();
 instance.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
-
 axios.interceptors.request.use = instance.interceptors.request.use;
-
 //request拦截器
 instance.interceptors.request.use(
   config => {
@@ -35,9 +28,9 @@ instance.interceptors.response.use(
       switch(error.response.status){
         case 401:
           store.dispatch('UserLogout'); //可能是token失效，清楚它
-          router.replace({ //跳转到登录页面
+          router.replace({
             path: '/login',
-            query: { redirect: router.currentRoute.fullPath } // 将跳转的路由path作为参数，登录成功后跳转到该路由
+            query: { redirect: router.currentRoute.fullPath }
           });
       }
     }
@@ -46,19 +39,15 @@ instance.interceptors.response.use(
 );
 
 export default {
-  //用户注册
   userRegister(data){
     return instance.post('/api/register', data);
   },
-  //用户登录
-  userLogin(data){
+   userLogin(data){
     return instance.post('/api/posts', data);
   },
-  //获取用户
   getUser(){
     return instance.get('/api/user');
   },
-  //删除用户
   delUser(data){
     return instance.post('/api/posts', data);
   },

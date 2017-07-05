@@ -160,7 +160,7 @@
   ],
   "index":[
     {
-      "swiper":[
+      "swiper":   [
         {
           "title": "选择都有对应的结果”，反乌托邦拷之作",
           "mgurl":"/static/img/side01.jpg"
@@ -178,9 +178,72 @@
           "mgurl":"/static/img/side01.jpg"
         }
 
-      ]
+        ]
+  },
+    {
+      "swipertw": [
+      {
+        "mgurl":"/static/img/side01.jpg"
+      },
+      {
+        "mgurl":"/static/img/side01.jpg"
+      },
+      {
+        "mgurl":"/static/img/side01.jpg"
+      },
+      {
+        "mgurl":"/static/img/side01.jpg"
+      }
 
-  }
+    ]
+    },
+    {
+
+      "banner": [
+        {
+          "portrait":"/static/upload/side3.jpg",
+          "from":"来自编辑推荐",
+          "name":"旁观者：Game name",
+          "url":"/static/upload/side3.jpg",
+          "title":"每一个选择都有对应的结果”，反乌托邦拷问人性之作"
+        },
+        {
+          "portrait":"/static/upload/side4.jpg",
+          "from":"来自编辑推荐",
+          "name":"旁观者：Game name",
+          "url":"/static/upload/side4.jpg",
+          "title":"每一个选择都有对应的结果”，反乌托邦拷问人性之作"
+        },
+        {
+          "portrait":"/static/upload/side5.jpg",
+          "from":"来自编辑推荐",
+          "name":"旁观者：Game name",
+          "url":"/static/upload/side5.jpg",
+          "title":"每一个选择都有对应的结果”，反乌托邦拷问人性之作"
+        }
+
+      ]
+    },
+    {
+
+      "advert": [
+        {
+          "url":"/static/upload/side6-1.jpg",
+          "title":"每一个选择都有对应的结果”，反乌托邦拷问人性之作"
+        },
+        {
+          "url":"/static/upload/side6-1.jpg",
+          "title":"每一个选择都有对应的结果”，反乌托邦拷问人性之作"
+        },
+        {
+          "url":"/static/upload/side6-1.jpg",
+          "title":"每一个选择都有对应的结果”，反乌托邦拷问人性之作"
+        }
+
+      ]
+    }
+
+
 
   ]
 

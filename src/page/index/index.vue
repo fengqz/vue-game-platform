@@ -5,7 +5,7 @@
   img{ width: 100%; height: auto}
   .icon-icon-logo{width: 2.5rem;height: 2.5rem; float: left;}
   .swiper{ border-bottom:1px #575e68 solid;}
-  section{
+  section{ font-size: 0;
       .titlebox{ background:#434a54; color:#b3bac1;  font-size: 0.5rem; padding: 0.2rem; border-bottom: 2px solid #575e68; }
       .index-sideimg{ position: relative;  margin: 0; background: #22262c;
         .thisopacty{ position: absolute; top: 50%; left: 2rem; right: 2rem; margin-top: -1rem; padding: 0.5rem 0; color: white;font-size: 0.6rem; border: 1px solid #3bafda; background-color: rgba(59, 175, 218,0.6);
@@ -32,7 +32,6 @@
   .ty_banpt .swiper-slide img{ width:100%; }
 
 </style>
-
 <template>
   <div class="index">
     <header-index ></header-index>
@@ -54,57 +53,27 @@
       </article>
       <div class="ty_banpt">
       <swiper :options="swiperOption2" >
-        <swiper-slide>
-            <img src="../../assets/upload/side01.jpg" alt="">
-        </swiper-slide>
-        <swiper-slide >
-            <img src="../../assets/upload/side01.jpg" alt="">
+        <swiper-slide v-for="item in ipersto">
+            <img :src="item.mgurl" alt="">
         </swiper-slide>
       </swiper>
       </div>
     </section>
     <!-- 首页第3栏 -->
-    <section>
+    <section v-for="item in banner">
       <article>
-        <div class="icom"><img src="../../assets/upload/side3.jpg"></div>
-        <div class="facebook-name">来自编辑推荐</div>
-        <div class="facebook-date">旁观者：Game name</div>
+        <div class="icom"><img :src="item.portrait"></div>
+        <div class="facebook-name">{{item.from}}</div>
+        <div class="facebook-date">{{item.name}}</div>
       </article>
-      <img src="../../assets/upload/side3.jpg" >
-      <div class="titlebox">“每一个选择都有对应的结果”，反乌托邦拷问人性之作</div>
-    </section>
-    <!-- 首页第3栏 -->
-    <section>
-      <article>
-        <div class="icom"><img src="../../assets/upload/side4.jpg"></div>
-        <div class="facebook-name">来自编辑推荐</div>
-        <div class="facebook-date">旁观者：Game name</div>
-      </article>
-        <img src="../../assets/upload/side4.jpg" >
-        <div class="titlebox">“每一个选择都有对应的结果”，反乌托邦拷问人性之作</div>
-    </section>
-    <!-- 首页第3栏 -->
-    <section>
-      <article>
-        <div class="icom"><img src="../../assets/upload/side5.jpg"></div>
-        <div class="facebook-name">来自编辑推荐</div>
-        <div class="facebook-date">旁观者：Game name</div>
-      </article>
-        <img src="../../assets/upload/side5.jpg" >
-        <div class="titlebox">“每一个选择都有对应的结果”，反乌托邦拷问人性之作</div>
+      <img :src="item.url" >
+      <div class="titlebox">{{item.title}}</div>
     </section>
     <!-- 首页第5栏 -->
-    <section>
+    <section v-for="item in advert">
       <div class="index-sideimg">
-        <img src="../../assets/upload/side6-1.jpg" alt="">
-        <div class="thisopacty">最新游戏<i></i>新鲜出炉 火热上线</div>
-      </div>
-      <!-- 首页第5栏 end-->
-    </section>
-    <section>
-      <div class="index-sideimg">
-        <img src="../../assets/upload/side6-1.jpg" alt="">
-        <div class="thisopacty">最新游戏<i></i>新鲜出炉 火热上线</div>
+        <img :src="item.url" alt="">
+        <div class="thisopacty">最新游戏<i></i>{{item.title}}</div>
       </div>
       <!-- 首页第5栏 end-->
     </section>
@@ -112,9 +81,7 @@
     <footer-index></footer-index>
   </div>
 </template>
-
 <script>
-
 import footerIndex from "../../components/footer"
 import headerIndex from "../../components/indexheader"
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
@@ -124,6 +91,9 @@ export default {
   data () {
     return {
       ipers:[],
+      ipersto:[],
+      banner:[],
+      advert:[],
       swiperOption: {
         pagination: '.swiper-pagination',
         paginationClickable: true,
@@ -133,10 +103,6 @@ export default {
         centeredSlides: true,
         slidesPerView: 1.3,
       }
-
-
-
-
     }
   },
   components:{
@@ -147,16 +113,13 @@ export default {
   },
   beforeCreate(){
       api.getdata("/api/index").then(({data})=>{
-        this.ipers=this.ipers.concat(data[0].swiper);
-          console.log( this.ipers);
-
+       this.ipers=this.ipers.concat(data[0].swiper);
+       this.ipersto=this.ipersto.concat(data[1].swipertw);
+       this.banner=this.banner.concat(data[2].banner);
+       this.advert=this.advert.concat(data[3].advert);
       }).catch((error)=> {
         console.log(error);
       });
   }
-
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-
