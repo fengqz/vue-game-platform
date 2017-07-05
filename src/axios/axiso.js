@@ -65,8 +65,8 @@ export default {
 
   gameclasify(data){
     return instance.get('/api/gameclasify',data);
-  }/*,
-  selects(data){
-    return instance.get('/api/routk',data);
-  }*/
+  },
+  getdata(dataurl){
+    return instance.get(dataurl);
+  }
 }

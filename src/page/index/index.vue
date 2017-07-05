@@ -38,16 +38,10 @@
     <header-index ></header-index>
     <!-- 首页第1栏 -->
     <swiper :options="swiperOption" class="swiper">
-      <swiper-slide>
+      <swiper-slide v-for="item in ipers">
         <div class="external">
-          <img src="../../assets/upload/side01.jpg" alt="">
-          <div class="text-titlebox">“每一个选择都有对应的结果”，反乌托邦拷之作1</div>
-        </div>
-      </swiper-slide>
-      <swiper-slide >
-        <div class="external">
-          <img src="../../assets/upload/side01.jpg" alt="">
-          <div class="text-titlebox">“每一个选择都有对应的结果”，反乌托邦拷问作1</div>
+          <img :src="item.mgurl" alt="">
+          <div class="text-titlebox">{{item.title}}</div>
         </div>
       </swiper-slide>
 
@@ -124,10 +118,12 @@
 import footerIndex from "../../components/footer"
 import headerIndex from "../../components/indexheader"
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import api from "../../axios/axiso"
 export default {
   name: 'hello',
   data () {
     return {
+      ipers:[],
       swiperOption: {
         pagination: '.swiper-pagination',
         paginationClickable: true,
@@ -139,6 +135,8 @@ export default {
       }
 
 
+
+
     }
   },
   components:{
@@ -147,6 +145,15 @@ export default {
     swiper,
     swiperSlide
   },
+  beforeCreate(){
+      api.getdata("/api/index").then(({data})=>{
+        this.ipers=this.ipers.concat(data[0].swiper);
+          console.log( this.ipers);
+
+      }).catch((error)=> {
+        console.log(error);
+      });
+  }
 
 }
 </script>

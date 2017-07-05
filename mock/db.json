@@ -157,7 +157,33 @@
       ]
 
     }
+  ],
+  "index":[
+    {
+      "swiper":[
+        {
+          "title": "选择都有对应的结果”，反乌托邦拷之作",
+          "mgurl":"/static/img/side01.jpg"
+        },
+        {
+          "title": "22选择都有对应的结果”，反乌托邦拷之作",
+          "mgurl":"/static/img/side01.jpg"
+        },
+        {
+          "title": "33选择都有对应的结果”，反乌托邦拷之作",
+          "mgurl":"/static/img/side01.jpg"
+        },
+        {
+          "title": "44选择都有对应的结果”，反乌托邦拷之作",
+          "mgurl":"/static/img/side01.jpg"
+        }
+
+      ]
+
+  }
+
   ]
+
 
 
 }
